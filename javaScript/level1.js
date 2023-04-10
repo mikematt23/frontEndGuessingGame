@@ -1,6 +1,6 @@
 const data = sessionStorage.getItem('user')
 const number = Math.floor(Math.random()*10)
-
+const logOut = document.getElementById('logOut')
 const guess = document.getElementById('guess')
 const answer = document.getElementById('answer')
 const guessButton = document.getElementById('guessButton')
@@ -81,4 +81,9 @@ guessButton.addEventListener('click',async ()=>{
     })
   })
   lives.innerText = user.lives -1
+})
+
+logOut.addEventListener('click',()=>{
+  sessionStorage.clear()
+  window.location.pathname = '../index.html'
 })

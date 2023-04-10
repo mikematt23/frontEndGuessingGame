@@ -6,6 +6,7 @@ const answer = document.getElementById('answer')
 const guessButton = document.getElementById('guessButton')
 const message = document.getElementById('message')
 const lives = document.getElementById('lives')
+const logOut = document.getElementById('logOut')
 
 answer.innerText = number
 lives.innerText = remaininglives
@@ -71,4 +72,8 @@ guessButton.addEventListener('click',async ()=>{
     })
   })
   lives.innerText = user.lives -1
+})
+logOut.addEventListener('click',()=>{
+  sessionStorage.clear()
+  window.location.pathname = '../index.html'
 })

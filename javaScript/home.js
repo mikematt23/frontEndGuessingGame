@@ -2,6 +2,7 @@ const userName = document.getElementById('userName')
 const level = document.getElementById('level')
 const lives = document.getElementById('lives')
 const data = sessionStorage.getItem('user')
+const logOut = document.getElementById('logOut')
 const startGameButton = document.getElementById('startGameButton')
 
 
@@ -24,6 +25,10 @@ const dataFetch = async ()=>{
 }
 
 dataFetch()
+logOut.addEventListener('click',()=>{
+   sessionStorage.clear()
+   window.location.pathname = '../index.html'
+})
 startGameButton.addEventListener('click',()=>{
   window.location.pathname = '../html/level1.html'
 })
