@@ -57,3 +57,8 @@ form div{
   display: flex;
   flex-direction: column;
 }
+#background{
+  background-color: rgb(125, 180, 209);
+  border-radius: 5px;
+  padding: 1rem;
+}
